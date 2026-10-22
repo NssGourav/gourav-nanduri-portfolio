@@ -1,19 +1,30 @@
-# Gourav Nanduri — portfolio
-A standalone Vite + Three.js portfolio. Terminal-inspired navigation referenced from Prathamesh Jakkula, an interactive Three.js wireframe scene, selected product work, hackathons, organizing, and open-source contributions.
+# Agentic Universe — Gourav Nanduri
+An immersive Three.js portfolio on `codex/portfolio-development`. The main branch retains the terminal-style portfolio deployed to GitHub Pages.
 
-## Local development
+## Run
 ```sh
 npm ci
 npm run dev
 ```
-
-## Production
 ```sh
 npm run build
 npm run preview
 ```
-Build output: `build/`. Relative assets support GitHub Pages project URLs. `.github/workflows/pages.yml` deploys the main branch using GitHub Actions. Fonts are served locally. The 3D scene supports pausing, reduced motion, and a WebGL fallback. It stops rendering when the page is hidden or scene is offscreen.
 
-Update content in `index.html`, appearance in `src/style.css`, interactions and the Three.js scene in `src/main.js`. Résumé: `public/resume.pdf`.
+## Experience
+- Full-screen 3D agent network with an orchestrator core, six interactive agents, orbital rings, signal packets, stars and a circuit floor.
+- Orbit and zoom using pointer/touch controls. Select 3D nodes or keyboard-accessible dock buttons to explore.
+- Projects, AI systems, hackathons, open source, journey and contact panels.
+- “Follow the signal” tours each agent. Escape, manual navigation, closing a panel or resetting the camera ends the tour.
+- Pause controls and automatic reduced-motion support. Navigation and portfolio content remain available if WebGL cannot initialize.
+- Responsive desktop panels and mobile sheets; fonts and résumé served locally.
 
-Design direction inspired by Prathamesh Jakkula's command-style portfolio. Original implementation and visual assets; project illustrations are identified as concepts. Career details come from the provided résumé; event details come from Gourav's LinkedIn posts. No event photos or headshot are included.
+## Source
+- `src/main.js`: Three.js scene, camera controls, postprocessing, raycasting, animation and interface behavior.
+- `src/content.js`: portfolio content, based on the provided résumé and Gourav’s LinkedIn posts.
+- `src/style.css`: overlay interface and responsive layouts.
+- `public/resume.pdf`: résumé.
+
+The agents are a visual navigation metaphor, not remotely executing AI services. No API keys, analytics, model calls or backend are needed.
+
+The GitHub Pages workflow deploys only pushes to `main`. Development-branch pushes do not change the live site. Build output: `build/`, with relative asset paths for GitHub Pages.
